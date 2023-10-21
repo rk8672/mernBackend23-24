@@ -7,13 +7,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 let cors = require("cors")
+app.use(cors());
 
-
-app.use(cors({
-    origin: "https://mernbackend23-24.onrender.com",
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-}));
+// app.use(cors({
+//     origin: "https://mernbackend23-24.onrender.com",
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true,
+// }));
 
 // Allow CORS for requests from 'https://mernbackend23-24.onrender.com'
 app.use((req, res, next) => {
