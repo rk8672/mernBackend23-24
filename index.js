@@ -16,12 +16,12 @@ app.use(cors());
 // }));
 
 // Allow CORS for requests from 'https://mernbackend23-24.onrender.com'
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://mernbackend23-24.onrender.com');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', 'https://mernbackend23-24.onrender.com');
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//   res.header('Access-Control-Allow-Credentials', 'true');
+//   next();
+// });
 
 const dataConnection = require("./config/db.js");
 dataConnection();
