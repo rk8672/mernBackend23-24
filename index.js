@@ -11,7 +11,7 @@ let cors = require("cors")
 
 app.use(cors({
     origin: "https://mernbackend23-24.onrender.com",
-    headers: ["Content-Type"],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
 
