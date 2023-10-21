@@ -7,7 +7,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 let cors = require("cors")
-app.use(cors());
+
+
+app.use(cors({
+    origin: "https://mernbackend23-24.onrender.com",
+    headers: ["Content-Type"],
+    credentials: true,
+}));
 
 const dataConnection = require("./config/db.js");
 dataConnection();
