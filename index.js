@@ -43,6 +43,7 @@ app.get('/', (req, res) => {
 const main = require("./routes/index.js");
 app.use('/', main);
 
+app.options('*', cors());
 console.log(port);
 app.listen(port, () => {
     console.log(` Radha Krishna Server is up and running on ${port}`)
