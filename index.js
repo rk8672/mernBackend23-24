@@ -10,7 +10,7 @@ let cors = require("cors")
 app.use(
     cors({
         origin:["http://localhost:10000",
-    "https://mernbackend23-24.onrender.com"],
+    "https://mernbackend23-24.onrender.com", "http://mernbackend23-24.onrender.com", "*",],
 
 })
 );
