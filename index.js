@@ -7,7 +7,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 let cors = require("cors")
-app.use(cors());
+app.use(
+    cors({
+        origin:["http://localhost:10000",
+    "https://mernbackend23-24.onrender.com"],
+
+})
+);
 
 // app.use(cors({
 //     origin: "https://mernbackend23-24.onrender.com",
