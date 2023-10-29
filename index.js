@@ -1,19 +1,16 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 const port = process.env.PORT || 10000;
 app.use(express.json());
 
-let cors = require("cors")
-app.use(
-    cors({
-        origin:["http://localhost:10000",
-    "https://mernbackend23-24.onrender.com", "http://mernbackend23-24.onrender.com", "*",],
 
-})
-);
+
 
 // app.use(cors({
 //     origin: "https://mernbackend23-24.onrender.com",
